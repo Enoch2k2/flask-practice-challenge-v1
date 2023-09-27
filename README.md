@@ -5,7 +5,8 @@ Use this practice project to help sharpen your skills for the phase 4 live code!
 ### Instructions
 
 * If you don't have `python version 3.9.2`, you may have to install with `pyenv install 3.9.2`.
-* Install the dependencies with `pipenv install`. Then go into `pipenv shell`.
+* Run `pipenv shell` to start your virtual environment. You don't have to worry about setting your python verison.
+* Install the dependencies with `pipenv install`.
 * cd into `server`. From there you can run the server with `python app.py`
 
 ### Project Structure
