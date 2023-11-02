@@ -12,7 +12,7 @@ class Post(db.Model, SerializerMixin):
 
   comments = db.relationship("Comment", back_populates="post")
 
-  serialize_rules=("-comments.post")
+  serialize_rules=("-comments.post",)
 
   def __repr__(self):
     return f'<Post id={self.id} author={self.author} title={self.title}>'
@@ -28,7 +28,7 @@ class Comment(db.Model, SerializerMixin):
 
   post = db.relationship("Post", back_populates="comments")
 
-  serialize_rules=("-post.comments")
+  serialize_rules=("-post.comments",)
 
   def __repr__(self):
     return f'<Comment id={self.id} commenter={self.commenter}  content={self.content}>'
