@@ -27,6 +27,7 @@ with app.app_context():
   db.session.commit()
 
   post_3_comment_1 = Comment(commenter="Sara", post_id=post_3.id, content="Cute Dog!")
+  post_3_comment_2 = Comment(commenter="Sara", post_id=post_3.id, content="Reminds me of Yodi")
 
-  db.session.add(post_3_comment_1)
+  db.session.add_all([post_3_comment_1, post_3_comment_2])
   db.session.commit()
